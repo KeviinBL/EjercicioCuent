@@ -1,13 +1,13 @@
 package EjercicioCuenta;
 
-public class Cliente {
+public class Persona {
 
     private String nombre;
     private String apellido;
     private String numIdentificacion;
     Cuenta cuentas[];
 
-    public Cliente(String nombre, String apellido, String numIdentificacion, Cuenta[] cuentas) {
+    public Persona(String nombre, String apellido, String numIdentificacion, Cuenta[] cuentas) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.numIdentificacion = numIdentificacion;
