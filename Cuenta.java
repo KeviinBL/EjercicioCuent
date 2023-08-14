@@ -24,3 +24,8 @@ public class Cuenta {
             saldoCuenta -= cantidad;
         }
     }
+
+        public void retirarDinero(double cantidad){
+            saldoCuenta -= cantidad;
+        }
+    }
