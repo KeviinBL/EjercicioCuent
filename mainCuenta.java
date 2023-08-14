@@ -1,10 +1,10 @@
 package EjercicioCuenta;
 import java.util.Scanner;
 
-public class Main {
+public class mainCuenta {
 
 
-    public static int buscarNumeroDeCuenta ( Cuenta cuentas[], int numeroDeCuentaAbucar){
+    public static int buscarNumeroDeCuenta (EjercicioCuenta.Cuenta cuentas[], int numeroDeCuentaAbucar){
         int indice = 0;
         int iterador = 0;
         boolean numeroDeCuentaEncontrada = false;
@@ -17,17 +17,16 @@ public class Main {
             iterador ++;
         }
 
-        if(numeroDeCuentaEncontrada == false){
-            indice = -1;
+        if(numeroDeCuentaEncontrada == false) {
         }
         return indice;
     }
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        String nombre,apellido,dni;
-        Cuenta cuentas[];
-        Cliente cliente;
+        String nombre,apellido,numIdentificacion;
+        EjercicioCuenta.Cuenta cuentas[];
+       EjercicioCuenta.Persona cliente;
         int numeroCuenta,cantidadCuentas,opcion,indiceNumeroCuenta;
         double saldo,cantidadDinero;
 
@@ -39,8 +38,8 @@ public class Main {
         System.out.println("Digite el apellido del usuario : ");
         apellido =scanner.next();
 
-        System.out.println("Digite el dni del usuario : ");
-        dni = scanner.next();
+        System.out.println("Digite el Numero identificacion del usuario : ");
+        numIdentificacion = scanner.next();
 
         System.out.println("\nAhora digite la cantidad de cuentas que tiene el usuario : ");
         cantidadCuentas = scanner.nextInt();
@@ -62,7 +61,7 @@ public class Main {
             cuentas[i] = new Cuenta(numeroCuenta, saldo);
         }
 
-        cliente = new Cliente(nombre, apellido, dni, cuentas);
+        cliente = new Persona(nombre, apellido, numIdentificacion, cuentas);
 
         do{
             System.out.println("\n\tMENU");
